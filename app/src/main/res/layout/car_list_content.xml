@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="30dp">
+
+        <TextView
+            android:id="@+id/tag_line"
+            android:text="Mini, 2-3 Door, Manual, No Aircon (Group A) MBMN"
+            android:layout_width="match_parent"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="12sp"
+            android:textStyle="normal|bold"
+            android:layout_margin="5dp"
+            android:layout_height="match_parent"
+            android:textColor="@android:color/black" />
+
+    </FrameLayout>
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight=".4"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/rav_4_nologo"
+                android:id="@+id/pictureURL"
+                android:layout_marginRight="10dp"
+                android:scaleType="fitCenter" />
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight=".4"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/veh_make_model_name"
+                android:layout_alignStart="@+id/veh_make_model_name"
+                android:layout_marginTop="11dp"
+                android:id="@+id/passenger_quantity"
+                android:textSize="12sp"
+                tools:text="4 passengers" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/baggage_quantity"
+                android:layout_alignStart="@+id/baggage_quantity"
+                android:layout_marginTop="12dp"
+                android:id="@+id/doorCount"
+                android:textSize="12sp"
+                tools:text="5 Door" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/veh_make_model_name"
+                android:textSize="14sp"
+                tools:text="AW (up) or similar"
+                android:textStyle="normal|bold"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="11dp" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:id="@+id/baggage_quantity"
+                android:textSize="12sp"
+                tools:text="3 pieces of baggage"
+                android:layout_below="@+id/passenger_quantity"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:text="879.98"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/total_amount"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="5dp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:text="EUR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/currency_code"
+                android:textSize="10sp"
+                android:textAlignment="viewStart"
+                android:layout_toEndOf="@+id/total_amount"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignBottom="@+id/total_amount" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
